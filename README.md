@@ -1,2 +1,2 @@
 # ip
-https://evenzero.in/ip
+https://ip.evenzero.in
