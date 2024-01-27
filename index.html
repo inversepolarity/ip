@@ -6,28 +6,62 @@
     <title>inversepolarity</title>
 
     <link rel="stylesheet" href="reset.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="ip.css" />
-
-    <script src="https://unpkg.com/css-doodle@0.37.3/css-doodle.min.js"></script>
-
-    <script>
-      setTimeout(() => {
-        // location.reload();
-      }, 4000);
-    </script>
+    <!-- <script src="https://unpkg.com/css-doodle@0.37.3/css-doodle.min.js"></script> -->
   </head>
   <body>
-      <div id="fg">
-        <div id="msg"><a href="https://github.com/inversepolarity" target="_blank">inversepolarity</a> <br/>is nobody's computer</div>
+    <div class="flex justify-center">
+      <div class="flex-col w-96 justify-self-center">
+        <div class="mast h-10 leading-none text-white border bg-black">
+          <div class="flex gap-2">
+            <img src="ip.png" alt="inversepolarity" width="30px" />
+            <div class="flex-col">
+              <p class="text-md">inversepolarity</p>
+              <p class="text-xs tagline">nobody's computer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-col">
+          <div class="flex-col justify-between">
+            <div class="mt-4">
+              <p class="text-md item-title">tfhe-apple-prebuilt</p>
+              <p class="text-sm item-text">
+                <a href="https://tfhe.github.io/tfhe/">tfhe</a> binary prebuilt
+                for macOS/clang 15.0
+              </p>
+              <a
+                href="https://github.com/inversepolarity/tfhe-appleclang-prebuilt"
+                >github</a
+              >
+            </div>
+            <div class="mt-4">
+              <p class="text-md item-title">babel-prop-name-value-shorthand</p>
+              <p class="text-sm item-text">
+                babel plugin for convenient passing of props that have identical
+                names as their variablres
+              </p>
+              <a
+                href="https://github.com/inversepolarity/babel-prop-name-value-shorthand"
+                >github</a
+              >
+            </div>
+            <div class="mt-4">
+              <p class="text-md item-title">video-asks-questions</p>
+              <p class="text-sm item-text">
+                Given an MP4 video, and a set of questions with options that are
+                initialised before the script make-interactive.js is called, the
+                video turns interactive with current playback time depending on
+                the user input.
+              </p>
+              <a href="https://github.com/inversepolarity/video-questions"
+                >github</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="bg">
-      <css-doodle>
-        @grid: 1 / 100vw 100vh / #000; background-size: 200px 200px;
-        background-image: @doodle( @grid: 8 / 100%; @size: 4px; font-size: 4px;
-        color: hsl(@r40, 120%, 10%); box-shadow: @m3x5( calc(4em - @nx*1em)
-        @ny(*1em) @p(@m3(currentColor), @m2(#0000)), calc(2em + @nx*1em)
-        @ny(*1em) @lp ); );
-      </css-doodle>
     </div>
   </body>
 </html>
