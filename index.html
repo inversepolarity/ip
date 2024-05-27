@@ -1,75 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>inversepolarity</title>
 
-    <link rel="stylesheet" href="reset.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="ip.css" />
-    <!-- <script src="https://unpkg.com/css-doodle@0.37.3/css-doodle.min.js"></script> -->
-  </head>
-  <body>
-    <div class="flex justify-center">
-      <div class="flex-col w-96">
-        <div class="mast h-10 leading-none text-white border">
-          <div class="flex gap-2">
-            <img src="ip.png" alt="inversepolarity" width="30px" />
-            <div class="flex-col">
-              <p class="text-md">inversepolarity</p>
-              <p class="text-xs tagline">nobody's computer</p>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>inversepolarity</title>
+
+  <link rel="stylesheet" href="reset.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="ip.css" />
+  <!-- <script src="https://unpkg.com/css-doodle@0.37.3/css-doodle.min.js"></script> -->
+</head>
+
+<body>
+  <div class="flex justify-center">
+    <div class="flex-col w-96">
+      <div class="mast h-10 leading-none text-white border sticky top-0 shadow-md">
+        <div class="flex gap-2">
+          <img src="ip.png" alt="inversepolarity" width="30px" />
+          <div class="flex-col">
+            <p class="text-md">inversepolarity</p>
+            <p class="text-xs tagline">nobody's computer</p>
           </div>
         </div>
+      </div>
 
-        <div class="flex-col">
-          <div class="flex-col justify-between">
-            <div class="mt-8 flex gap-8">
-              <p class="text-md item-title">tfhe-apple-prebuilt</p>
-              <p class="text-xs item-text">
-                <a href="https://tfhe.github.io/tfhe/">tfhe</a> binary prebuilt
-                for macOS/clang 15.0
-              </p>
-              <a
-                href="https://github.com/inversepolarity/tfhe-appleclang-prebuilt"
-                >github</a
-              >
-            </div>
-            <div class="mt-8 flex gap-8">
-              <p class="text-md item-title">zentube/zyt</p>
-              <p class="text-xs item-text">
-                cross-browser extension for censuring youtube "features". blocks
-                emojis, comments, upsell elements, and other annoyances.
-              </p>
-              <a href="https://github.com/inversepolarity/ZYT">github</a>
-            </div>
-            <div class="mt-8 flex gap-8">
-              <p class="text-md item-title">babel-prop-name-value-shorthand</p>
-              <p class="text-xs item-text">
-                babel plugin for convenient passing of props that have identical
-                names as their variables.
-              </p>
-              <a
-                href="https://github.com/inversepolarity/babel-prop-name-value-shorthand"
-                >github</a
-              >
-            </div>
-            <div class="mt-8 flex gap-8">
-              <p class="text-md item-title">video-asks-questions</p>
-              <p class="text-xs item-text">
-                Given an MP4 video, and a set of questions with options that are
-                initialised before the script make-interactive.js is called, the
-                video turns interactive with current playback time depending on
-                the user input.
-              </p>
-              <a href="https://github.com/inversepolarity/video-questions"
-                >github</a
-              >
-            </div>
+      <div class="flex-col underline-offset-2">
+        <div class="flex-col justify-between h-[100vh]">
+          <div class="mt-8 flex-col gap-8 shadow-md p-4">
+            <p class="text-md item-title mb-2">video-asks-questions</p>
+            <p class="text-xs item-text">
+              Given an MP4 video, and a set of questions with options that are
+              initialised before the script make-interactive.js is called, the
+              video turns interactive with current playback time depending on
+              the user input.
+            </p><br />
+            <a href="https://github.com/inversepolarity/video-questions">github</a>
+          </div>
+          <div class="mt-8 flex-col gap-8 shadow-md p-4">
+            <p class="text-md item-title mb-2">babel-prop-name-value-shorthand</p>
+            <p class="text-xs item-text">
+              babel plugin for convenient passing of props that have identical
+              names as their variables.
+            </p><br />
+            <a href="https://www.npmjs.com/package/babel-prop-name-value-shorthand">npm</a>
+          </div>
+          <div class="mt-8 flex-col gap-8 shadow-md p-4">
+            <p class="text-md item-title mb-2">tfhe-apple-prebuilt</p>
+            <p class="text-xs item-text">
+              <a href="https://tfhe.github.io/tfhe/">tfhe</a> binary prebuilt
+              for macOS/clang 15.0
+            </p><br />
+            <a href="https://github.com/inversepolarity/tfhe-appleclang-prebuilt">github</a>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+  <footer class="sticky bottom-0 text-white p-4 flex justify-center">
+    Copyright &copy; 2024&nbsp; <a href="https://evenzero.in/">evenzero</a>
+  </footer>
+</body>
+
 </html>

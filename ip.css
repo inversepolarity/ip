@@ -8,27 +8,28 @@
 
 html body {
     font-family: "bm", sans-serif;
-    padding:10px;
-    background-color: rgb(68, 68, 68);
+    padding: 10px;
+    background-color: rgb(34, 34, 34);
 }
 
-.mast{
-    background-color: rgb(68, 68, 68);
-    border-bottom:1px solid salmon;
+.mast {
+    background-color: rgb(34, 34, 34);
 }
 
-.tagline{
+.tagline {
     color: rgb(100, 100, 100);
 }
 
-a{
-    color:rgb(255, 145, 0)!important;
+a {
+    color: rgb(255, 145, 0) !important;
+    background: conic-gradient(from 90deg at 50% 0%, #111, 50%, #222, #111);
 }
 
-.item-title{
-    color:fuchsia;
+.item-title {
+    color: fuchsia;
+    border-bottom: 1px solid rgb(70, 70, 70);
 }
 
-.item-text{
-    color:white;
+.item-text {
+    color: white;
 }
