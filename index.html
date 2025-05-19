@@ -13,7 +13,9 @@
 </head>
 
 <body>
-  <div class="flex justify-center">
+
+<body class="max-h-screen min-h-screen flex flex-col">
+<main class="flex-1 overflow-y-auto flex justify-center [scrollbar-width:none] [-ms-overflow-style:none]">
     <div class="flex-col w-96">
       <div class="mast h-10 leading-none text-white border sticky top-0 shadow-md">
         <div class="flex gap-2">
@@ -28,35 +30,33 @@
      
       <div class="flex-col underline-offset-2">
        <div class="flex-col justify-between h-[100vh]">
-         <div class="mt-8 flex-col gap-8 shadow-md p-4">
-           <p class="text-md item-title mb-2">uncl</p>
-            <p class="text-xs item-text">
-              terminal monoplexer
-            </p>
-            <p class="text-xs item-text mt-4">
-              uncl is a terminal monoplexer - a single, toggleable, resizeable, and draggable floating term window as an accomplice to your worst terminal misdeeds, written in rust
-            </p><br />
-            <a href="https://github.com/inversepolarity/uncl">github</a>
-          </div>
-          <div class="mt-8 flex-col gap-8 shadow-md p-4">
-            <p class="text-md item-title mb-2">richpip</p>
-            <p class="text-xs item-text">
-              De-Googled Picture-in-Picture Chrome Extension (with subtitle support)
-            </p>
-            <p class="text-xs item-text mt-4">
-              By default, Chrome ships with a picture-in-picture extension that:
-            <ul class="list-disc list-inside space-y-2 item-text mt-4">
-              <li class="text-xs font-medium">Collects data on videos watched</li>
-              <li class="text-xs font-medium">Provides no subtitle support</li>
-            </ul>
-            </p><br />
-            <p class="text-xs item-text mb-4">
-              RichPip aims to fix these.
-            </p>
-            <a href="https://github.com/inversepolarity/richpip">github</a>
-          </div>
-          <div class="mt-8 flex-col gap-8 shadow-md p-4">
-            <p class="text-md item-title mb-2">video-asks-questions</p>
+		<div class="mt-8 flex-col gap-8 shadow-md p-4">
+			<p class="text-md item-title mb-2">uncl</p>
+			<p class="text-xs item-text">terminal monoplexer</p>
+			<p class="text-xs item-text mt-4">
+			  uncl is a terminal monoplexer - a single, toggleable, resizeable, and draggable floating term window as an accomplice to your worst terminal misdeeds, written in rust
+			</p><br />
+			<a href="https://github.com/inversepolarity/uncl">github</a>
+		</div>
+		<div class="mt-8 flex-col gap-8 shadow-md p-4">
+			<p class="text-md item-title mb-2">richpip</p>
+			<p class="text-xs item-text">
+			  De-Googled Picture-in-Picture Chrome Extension (with subtitle support)
+			</p>
+			<p class="text-xs item-text mt-4">
+			  By default, Chrome ships with a picture-in-picture extension that:
+			<ul class="list-disc list-inside space-y-2 item-text mt-4">
+			  <li class="text-xs font-medium">Collects data on videos watched</li>
+			  <li class="text-xs font-medium">Provides no subtitle support</li>
+			</ul>
+			</p><br />
+			<p class="text-xs item-text mb-4">
+			  RichPip aims to fix these.
+			</p>
+			<a href="https://github.com/inversepolarity/richpip">github</a>
+		</div>
+	    <div class="mt-8 flex-col gap-8 shadow-md p-4">
+			<p class="text-md item-title mb-2">video-asks-questions</p>
             <p class="text-xs item-text">
               Given an MP4 video, and a set of questions with options that are
               initialised before the script make-interactive.js is called, the
@@ -65,30 +65,31 @@
             </p><br />
             <a href="https://github.com/inversepolarity/video-questions">github</a>
             <a target="_blank" href="https://bit.ly/3Yi3K1V">demo</a>
-          </div>
-          <div class="mt-8 flex-col gap-8 shadow-md p-4">
-            <p class="text-md item-title mb-2">babel-prop-name-value-shorthand</p>
-            <p class="text-xs item-text">
-              babel plugin for convenient passing of props that have identical
-              names as their variables.
-            </p><br />
-            <a href="https://www.npmjs.com/package/babel-prop-name-value-shorthand">npm</a>
-          </div>
-          <div class="mt-8 flex-col gap-8 shadow-md p-4">
-            <p class="text-md item-title mb-2">tfhe-apple-prebuilt</p>
+		</div>
+		<div class="mt-8 flex-col gap-8 shadow-md p-4">
+			<p class="text-md item-title mb-2">babel-prop-name-value-shorthand</p>
+			<p class="text-xs item-text">
+			  babel plugin for convenient passing of props that have identical
+			  names as their variables.
+			</p><br />
+			<a href="https://www.npmjs.com/package/babel-prop-name-value-shorthand">npm</a>
+		</div>
+		<div class="mt-8 flex-col gap-8 shadow-md p-4">
+			<p class="text-md item-title mb-2">tfhe-apple-prebuilt</p>
             <p class="text-xs item-text">
               <a href="https://tfhe.github.io/tfhe/">tfhe</a> binary prebuilt
               for macOS/clang 15.0
             </p><br />
             <a href="https://github.com/inversepolarity/tfhe-appleclang-prebuilt">github</a>
-          </div>
-        </div>
+        </div>		
+	   </div>
       </div>
     </div>
-  </div>
-  <footer class="sticky  bottom-0 text-white p-4 flex justify-center ">
-    Copyright &copy; 2024&nbsp; <a href="https://evenzero.in">evenzero</a>
+  </main>
+
+  <footer class="text-white p-4 flex justify-center mt-auto">
+    Copyright &copy; 2024&nbsp;
+    <a href="https://evenzero.in">evenzero</a>
   </footer>
 </body>
-
 </html>
