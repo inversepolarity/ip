@@ -1,95 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>inversepolarity</title>
-
-  <link rel="stylesheet" href="reset.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
-  <link rel="stylesheet" href="ip.css" />
-  <!-- <script src="https://unpkg.com/css-doodle@0.37.3/css-doodle.min.js"></script> -->
 </head>
-
-<body>
-
-<body class="max-h-screen min-h-screen flex flex-col">
-<main class="flex-1 overflow-y-auto flex justify-center [scrollbar-width:none] [-ms-overflow-style:none]">
-    <div class="flex-col w-96">
-      <div class="mast h-10 leading-none text-white border sticky top-0 shadow-md">
-        <div class="flex gap-2">
-          <img src="ip.png" alt="inversepolarity" width="30px" />
-          <div class="flex-col">
-            <p class="text-md">inversepolarity</p>
-            <p class="text-xs tagline">nobody's computer</p>
-          </div>
+<style>
+    @font-face {
+        font-family: "bm";
+        src: url("bm.woff") format("woff");
+        font-weight: 100;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    /* Responsive column layout */
+    .main-grid {
+        column-count: 4;
+        column-gap: 30px;
+        column-fill: balance;
+        width: 100%; 
+        min-height: calc(100vh - 100px); /* Account for header and footer */
+        padding: 10px; 
+        overflow: visible;
+    }
+    
+    /* Tablet and smaller desktop screens */
+    @media (max-width: 1200px) {
+        .main-grid {
+            column-count: 3;
+            column-gap: 25px;
+        }
+    }
+    
+    /* Small tablets and large phones */
+    @media (max-width: 900px) {
+        .main-grid {
+            column-count: 2;
+            column-gap: 20px;
+        }
+    }
+    
+    /* Mobile phones */
+    @media (max-width: 600px) {
+        .main-grid {
+            column-count: 1;
+            column-gap: 0;
+            padding: 15px;
+        }
+    }
+    
+    /* Project card styling */
+    .project-card {
+        width: 100%; 
+        background: #eee; 
+        padding: 10px; 
+        margin-bottom: 10px; 
+        break-inside: avoid; 
+        display: inline-block;
+    }
+    
+    /* Mobile adjustments for header */
+    @media (max-width: 600px) {
+        .header {
+            padding: 5px;
+            gap: 8px;
+        }
+        
+        .header h3 {
+            font-size: 1em;
+        }
+        
+        .header p {
+            font-size: 0.5em;
+        }
+    }
+</style>
+<body style="display:flex; 
+            flex-direction:column; 
+            padding:0; 	
+            margin:0; 
+            width:100vw;
+            min-height:100vh;
+            font-family: 'bm', sans-serif;
+            overflow-x:hidden;">
+  <header class="header" style="padding:2px; gap:4px; height:50px; display: flex; border-bottom:1px solid #eee; background:#eee;">
+    <img src="ip.png" width="50px" height="50px" alt="inversepolarity" />
+    <div>
+        <div style="flex-direction:column; line-height:0.3; display:flex;">
+            <h3>inversepolarity<p style="font-size:0.6em;">nobody's computer</p></h3>
         </div>
-      </div>
-
-     
-      <div class="flex-col underline-offset-2">
-       <div class="flex-col justify-between h-[100vh]">
-		<div class="mt-8 flex-col gap-8 shadow-md p-4">
-			<p class="text-md item-title mb-2">uncl</p>
-			<p class="text-xs item-text">terminal monoplexer</p>
-			<p class="text-xs item-text mt-4">
-			  uncl is a terminal monoplexer - a single, toggleable, resizeable, and draggable floating term window as an accomplice to your worst terminal misdeeds, written in rust
-			</p><br />
-			<a href="https://github.com/inversepolarity/uncl">github</a>
-		</div>
-		<div class="mt-8 flex-col gap-8 shadow-md p-4">
-			<p class="text-md item-title mb-2">richpip</p>
-			<p class="text-xs item-text">
-			  De-Googled Picture-in-Picture Chrome Extension (with subtitle support)
-			</p>
-			<p class="text-xs item-text mt-4">
-			  By default, Chrome ships with a picture-in-picture extension that:
-			<ul class="list-disc list-inside space-y-2 item-text mt-4">
-			  <li class="text-xs font-medium">Collects data on videos watched</li>
-			  <li class="text-xs font-medium">Provides no subtitle support</li>
-			</ul>
-			</p><br />
-			<p class="text-xs item-text mb-4">
-			  RichPip aims to fix these.
-			</p>
-			<a href="https://github.com/inversepolarity/richpip">github</a>
-		</div>
-	    <div class="mt-8 flex-col gap-8 shadow-md p-4">
-			<p class="text-md item-title mb-2">video-asks-questions</p>
-            <p class="text-xs item-text">
-              Given an MP4 video, and a set of questions with options that are
-              initialised before the script make-interactive.js is called, the
-              video turns interactive with current playback time depending on
-              the user input.
-            </p><br />
-            <a href="https://github.com/inversepolarity/video-questions">github</a>
-            <a target="_blank" href="https://bit.ly/3Yi3K1V">demo</a>
-		</div>
-		<div class="mt-8 flex-col gap-8 shadow-md p-4">
-			<p class="text-md item-title mb-2">babel-prop-name-value-shorthand</p>
-			<p class="text-xs item-text">
-			  babel plugin for convenient passing of props that have identical
-			  names as their variables.
-			</p><br />
-			<a href="https://www.npmjs.com/package/babel-prop-name-value-shorthand">npm</a>
-		</div>
-		<div class="mt-8 flex-col gap-8 shadow-md p-4">
-			<p class="text-md item-title mb-2">tfhe-apple-prebuilt</p>
-            <p class="text-xs item-text">
-              <a href="https://tfhe.github.io/tfhe/">tfhe</a> binary prebuilt
-              for macOS/clang 15.0
-            </p><br />
-            <a href="https://github.com/inversepolarity/tfhe-appleclang-prebuilt">github</a>
-        </div>		
-	   </div>
-      </div>
+    </div>
+  </header>
+  
+  <main class="main-grid" style="flex: 1;">
+    <div class="project-card">
+      <h2>uncl</h2>
+      <p>terminal monoplexer</p>
+      <p>uncl is a terminal monoplexer - a single, toggleable, resizeable, and draggable floating term window as an accomplice to your worst terminal misdeeds, written in rust</p>
+      <a href="https://github.com/inversepolarity/uncl">github</a>
+    </div>
+    
+    <div class="project-card">
+      <h2>richpip</h2>
+      <p>De-Googled Picture-in-Picture Chrome Extension (with subtitle support)</p>
+      <p>By default, Chrome ships with a picture-in-picture extension that:</p>
+      <ul>
+        <li>Collects data on videos watched</li>
+        <li>Provides no subtitle support</li>
+      </ul>
+      <p>RichPip aims to fix these.</p>
+      <a href="https://github.com/inversepolarity/richpip">github</a>
+    </div>
+    
+    <div class="project-card">
+      <h2>video-asks-questions</h2>
+      <p>Given an MP4 video, and a set of questions with options that are initialised before the script make-interactive.js is called, the video turns interactive with current playback time depending on the user input.</p>
+      <a href="https://github.com/inversepolarity/video-questions">github</a>
+      <a href="https://bit.ly/3Yi3K1V">demo</a>
+    </div>
+    
+    <div class="project-card">
+      <h2>babel-prop-name-value-shorthand</h2>
+      <p>babel plugin for convenient passing of props that have identical names as their variables.</p>
+      <a href="https://www.npmjs.com/package/babel-prop-name-value-shorthand">npm</a>
+    </div>
+    
+    <div class="project-card">
+      <h2>tfhe-apple-prebuilt</h2>
+      <p><a href="https://tfhe.github.io/tfhe/">tfhe</a> binary prebuilt for macOS/clang 15.0</p>
+      <a href="https://github.com/inversepolarity/tfhe-appleclang-prebuilt">github</a>
     </div>
   </main>
-
-  <footer class="text-white p-4 flex justify-center mt-auto">
-    Copyright &copy; 2024&nbsp;
-    <a href="https://evenzero.in">evenzero</a>
+  
+  <footer style="color:white; text-align:center; background:#444; height:50px; width:100%; position:sticky; bottom:0;">
+    <p>Copyright © 2024 <a href="https://evenzero.in">evenzero</a></p>
   </footer>
 </body>
 </html>
