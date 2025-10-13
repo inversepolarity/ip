@@ -1,3 +1,4 @@
 {
-    "GitHooks.hooksDirectory": "/home/suraj/Portfolios/ip/.git/hooks"
+    "GitHooks.hooksDirectory": "/home/suraj/Portfolios/ip/.git/hooks",
+    "liveServer.settings.port": 5501
 }
