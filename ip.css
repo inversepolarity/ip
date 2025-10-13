@@ -272,9 +272,9 @@
     
     /* Footer styles */
     footer {
-        color: white; 
+        color: #ffb6ad; 
         text-align: center; 
-        background: #333; 
+        background: #ffedeb; 
         padding: 15px;
         width: 100%;
         margin-top: auto;
