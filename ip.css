@@ -417,14 +417,16 @@ body {
   text-decoration: underline;
 }
 
-/* Footer styles */
 footer {
   color: #ffb6ad;
   text-align: center;
   background: #ffedeb;
   padding: 15px;
   width: 100%;
-  margin-top: -20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
