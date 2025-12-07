@@ -110,6 +110,15 @@ body {
   }
 }
 
+.joker-card {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  margin-bottom: 20px;
+  break-inside: avoid;
+  display: inline-block;
+}
+
 /* Project card styling */
 .project-card {
   width: 100%;
