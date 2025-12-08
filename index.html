@@ -51,7 +51,13 @@
           a cross-browser extension that takes users directly from search to
           first result
         </p>
-        <a href="https://github.com/inversepolarity/iamnotuncertain">github</a>
+        <div class="links">
+          <a href="https://github.com/inversepolarity/iamnotuncertain">github</a>
+          <span class="status-badge" id="worker-status">
+            status
+            <span class="status-led"></span>          
+          </span>
+        </div>
       </div>
 
       <div class="project-card">
@@ -179,10 +185,7 @@
     <footer>
       <p>Copyright © 2025 <a href="https://evenzero.in">evenzero</a></p>
     </footer>
-
-        <script type="text/javascript" src="baffle.js"></script>
-   
-
+    <script type="text/javascript" src="baffle.js"></script>
     <script defer>
       const taglineEl = document.querySelector("#baffle .tagline");
       
@@ -236,6 +239,33 @@
 
       reveal();
       setInterval(cycle, 5000);
+    </script>
+    <script type="text/javascript"defer>
+      async function checkWorkerStatus() {
+        const badge = document.getElementById('worker-status');
+        
+        return new Promise((resolve) => {
+          const img = new Image();
+          const timeout = setTimeout(() => {
+            badge.classList.remove('online');
+            badge.classList.add('offline');
+            resolve(false);
+          }, 5000);
+          
+          img.onload = img.onerror = () => {
+            clearTimeout(timeout);
+            // Either response means server is reachable
+            badge.classList.remove('offline');
+            badge.classList.add('online');
+            resolve(true);
+          };
+          
+          img.src = 'https://iamnotuncertain-issuebot.suraj-f45.workers.dev/?ping=' + Date.now();
+        });
+      }
+
+      checkWorkerStatus();
+      setInterval(checkWorkerStatus, 30000);
     </script>
   </body>
 </html>
