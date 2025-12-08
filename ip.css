@@ -525,17 +525,6 @@ body {
   text-decoration: underline;
 }
 
-footer {
-  overflow: hidden;
-  background-color: #ebebeb;
-
-  padding: 10px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
-}
 
 .links{
   display: flex;
@@ -590,7 +579,16 @@ footer {
   50% { opacity: 0.5; }
 }
 
-
+footer {
+  overflow: hidden;
+  background-color: #ebebeb;
+  padding: 10px;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+}
 
 footer p {
   margin: 0;
