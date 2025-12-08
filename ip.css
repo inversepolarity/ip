@@ -32,7 +32,6 @@ body {
   align-items: center;
   border-bottom: 1px solid #ddd;
   width: 100%;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   background-color: #efefef;
   background-image:
     repeating-linear-gradient(
@@ -56,16 +55,8 @@ body {
     0px 0,
     center center,
     center center;
-  box-shadow: 0 1px 5px  rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  animation: flicker 0.15s infinite;
-}
-
-
-@keyframes flicker {
-  0% { opacity: 1; }
-  50% { opacity: 0.98; }
-  100% { opacity: 1; }
 }
 
 
@@ -74,13 +65,14 @@ body {
   height: 50px;
   border-radius: 0px;
   border: 4px solid rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 50px;
 }
 
 .header-text {
   display: flex;
   flex-direction: column;
   line-height: 0.9;
+  margin-left:-2px;
 }
 
 .header h1 {
@@ -88,7 +80,6 @@ body {
   font-size: 1.5rem;
   position: relative;
   display: inline-block;
-  padding: 1px 4px;
   width: fit-content;
 }
 
@@ -107,12 +98,6 @@ body {
   position: relative;
   z-index: 1;
   color: #fff;
-  /* background-image: url('Black_Moth_Super_Rainbow__I_think_it_is_beautiful_that_you_.gif'); */
-  background-size: contain;
-  background-position: center center;
-  background-clip: text;
-  -webkit-background-clip: text;
-  /* color: transparent; */
   background-attachment: fixed;
 }
 
@@ -120,6 +105,7 @@ body {
   margin: 0;
   font-size: 0.8rem;
   color: #666;
+  font-weight:bold;
 }
 
 
@@ -129,8 +115,7 @@ body {
   overflow: hidden;
   padding: 2px;
   background: transparent;
-    margin-left: -2px;
-
+  margin-left: -2px;
 }
 
 #baffle .tagline {

@@ -242,28 +242,39 @@
     </script>
     <script type="text/javascript"defer>
       async function checkWorkerStatus() {
-        const badge = document.getElementById('worker-status');
-        
-        return new Promise((resolve) => {
-          const img = new Image();
-          const timeout = setTimeout(() => {
-            badge.classList.remove('online');
-            badge.classList.add('offline');
-            resolve(false);
-          }, 5000);
-          
-          img.onload = img.onerror = () => {
-            clearTimeout(timeout);
-            // Either response means server is reachable
-            badge.classList.remove('offline');
-            badge.classList.add('online');
-            resolve(true);
-          };
-          
-          img.src = 'https://iamnotuncertain-issuebot.suraj-f45.workers.dev/?ping=' + Date.now();
-        });
+      const badge = document.getElementById('worker-status');
+      
+      // Check if user is offline first
+      if (!navigator.onLine) {
+        badge.classList.remove('online', 'offline');
+        return;
       }
+      
+      return new Promise((resolve) => {
+        const img = new Image();
+        const timeout = setTimeout(() => {
+          badge.classList.remove('online');
+          badge.classList.add('offline');
+          resolve(false);
+        }, 5000);
+        
+        img.onload = img.onerror = () => {
+          clearTimeout(timeout);
+          badge.classList.remove('offline');
+          badge.classList.add('online');
+          resolve(true);
+        };
+        
+        img.src = 'https://iamnotuncertain-issuebot.suraj-f45.workers.dev/?ping=' + Date.now();
+      });
+    }
 
+    // Listen for online/offline events
+    window.addEventListener('online', checkWorkerStatus);
+    window.addEventListener('offline', () => {
+      const badge = document.getElementById('worker-status');
+      badge.classList.remove('online', 'offline');
+    });
       checkWorkerStatus();
       setInterval(checkWorkerStatus, 30000);
     </script>
