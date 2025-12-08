@@ -14,53 +14,14 @@
 
   <body>
     <header class="header">
-      <img src="ip.png" alt="inversepolarity logo" />
+      <img src="iptr.png" alt="inversepolarity logo" />
       <div class="header-text">
-        <h1>inversepolarity</h1>
+        <h1><span>inversepolarity</span></h1>
         <div id="baffle">
           <p id="t1" class="tagline">nobody's computer</p>
         </div>
       </div>
     </header>
-
-    <script type="text/javascript" src="baffle.js"></script>
-   
-
-<script defer>
-  const taglines = [
-    "nobody's computer",
-    "slipstreamed software",
-    "functionally federated products",
-    "intentful solutions",
-    "hyperreal precision tools",
-  ];
-
-  let index = 0;
-
-  const b = baffle("#baffle .tagline", {
-    characters: "█▓▒░<>/[]{}—=+*^!?@#$%&",
-    speed: 75,
-  });
-
-  function changeTagline() {
-    // Start obfuscating current text
-    b.start();
-
-    // After brief obfuscation, swap text and reveal
-    setTimeout(() => {
-      index = (index + 1) % taglines.length;
-      b.text(() => taglines[index]);
-      b.reveal(2000);
-    }, 500);
-  }
-
-  // Initial reveal
-  b.start();
-  b.reveal(2000);
-
-  // Cycle through taglines every 5 seconds
-  setInterval(changeTagline, 5000);
-</script>
     <main class="main-grid">
       <div class="project-card">
         <h2>skiboard</h2>
@@ -218,5 +179,63 @@
     <footer>
       <p>Copyright © 2025 <a href="https://evenzero.in">evenzero</a></p>
     </footer>
+
+        <script type="text/javascript" src="baffle.js"></script>
+   
+
+    <script defer>
+      const taglineEl = document.querySelector("#baffle .tagline");
+      
+      function wrapChars(text) {
+        return text.split('').map(char => 
+          char === ' ' 
+            ? '<span style="background:transparent"> </span>' 
+            : `<span>${char}</span>`
+        ).join('');
+      }
+
+      const taglines = [
+        "nobody's computer",
+        "slipstreamed software",
+        "functionally federated products",
+        "intentful solutions",
+        "hyperreal precision tools",
+      ];
+
+      let index = 0;
+      const chars = "█▓▒░<>/[]{}—=+*^!?@#$%&";
+
+      function randomChar() {
+        return chars[Math.floor(Math.random() * chars.length)];
+      }
+
+      function scramble(text, revealCount) {
+        return text.split('').map((char, i) => {
+          if (char === ' ') return ' ';
+          return i < revealCount ? char : randomChar();
+        }).join('');
+      }
+
+      function reveal() {
+        const text = taglines[index];
+        let revealed = 0;
+        
+        const interval = setInterval(() => {
+          taglineEl.innerHTML = wrapChars(scramble(text, revealed));
+          revealed++;
+          if (revealed > text.length) {
+            clearInterval(interval);
+          }
+        }, 75);
+      }
+
+      function cycle() {
+        index = (index + 1) % taglines.length;
+        reveal();
+      }
+
+      reveal();
+      setInterval(cycle, 5000);
+    </script>
   </body>
 </html>
