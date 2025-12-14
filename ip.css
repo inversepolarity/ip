@@ -526,6 +526,29 @@ body {
   text-decoration: underline;
 }
 
+.project-norc{
+  background:yellow;
+  color:black;
+  width: fit-content;
+}
+
+.project-alpha{
+  background:lightblue;
+  color:black;
+  width: fit-content;
+}
+
+.project-beta{
+  background:pink ;
+  color:black;
+  width: fit-content;
+}
+
+.project-abandon{
+  background:lightgrey;
+  color:black;
+  width: fit-content;
+}
 
 .links{
   display: flex;
