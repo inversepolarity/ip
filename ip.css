@@ -1,6 +1,6 @@
 @font-face {
   font-family: "bm";
-  src: url("bm.woff") format("woff");
+  src: url("dm.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -53,15 +53,15 @@ body {
     ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent),
     url('bg.gif');
-  background-size: 
+  background-size:
     100% 100%,
     100% 100%,
     cover;
-  background-repeat: 
+  background-repeat:
     repeat,
     no-repeat,
     no-repeat;
-  background-position: 
+  background-position:
     0px 0,
     center center,
     center center;
@@ -576,7 +576,7 @@ body {
 /* Online state */
 .status-badge.online .status-led {
   background: #00ff00;
-  box-shadow: 
+  box-shadow:
     0 0 4px #00ff00,
     0 0 8px #00ff00,
     0 0 12px #00ff00;
@@ -586,7 +586,7 @@ body {
 /* Offline state */
 .status-badge.offline .status-led {
   background: #ff0000;
-  box-shadow: 
+  box-shadow:
     0 0 4px #ff0000,
     0 0 8px #ff0000,
     0 0 12px #ff0000;
